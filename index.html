@@ -173,7 +173,7 @@
             return iaScore;
     }
     
-
+   
         // fonction compare
     function comparer (iaChoice, reponse){
         if(reponse === "pierre") {
@@ -211,23 +211,23 @@
             }
         }
     }
-    console.log(comparer (iaChoice, reponse));
 
-        // points count
-
-    
+    let scoreJoueur = 0;
+    let scoreOrdi = 0;
 
     for (let roundNumber = 1; roundNumber <= 3; roundNumber++ ){
 
         let iaChoice = FiaScore();
-        console.log(iaChoice);
         let reponse = prompt("pierre, feuille ou ciseaux ?");
         console.log(reponse);
-
+        console.log(iaChoice);
+        
+        console.log(comparer (iaChoice, reponse));
         let resultat = comparer (iaChoice, reponse);
-        let scoreOrdi = 0;
-        let scoreJoueur = 0;
+       
+        
 
+        // points count
         if (resultat === "Feuille gagne !" && reponse === "feuille"){
             scoreJoueur++;
         } else if (resultat === "Pierre gagne !" && reponse === "pierre"){
@@ -243,11 +243,25 @@
         } else if (resultat === "Ciseaux gagne !" && iaChoice === "ciseaux"){
             scoreOrdi++;
         }
-    
 
         console.log(scoreJoueur);
         console.log(scoreOrdi);
+
+        if (roundNumber === 3){
+            if (scoreJoueur < scoreOrdi){
+                alert ("L'ordinateur à gagné...");
+            } else if(scoreOrdi < scoreJoueur){
+                alert ("Vous avez gagné! Le droit de recommencer..");
+            } else if (scoreOrdi === scoreJoueur){
+                alert ("Match nul, try again !")
+            }
+        }
     }
+    
+
+   
+
+
     // let iaScore = "ciseaux";
     //     let reponse = prompt("pierre, feuille ou ciseaux ?");
     //     if(reponse === "pierre") {
