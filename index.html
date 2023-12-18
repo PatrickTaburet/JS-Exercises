@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+  <!-- Exercice Javascript 2 Les Variables -->
+
+  <!-- <script>
+    let monNombre = 4
+    let maChaine = "Bonjour ! :-)" 
+    let monBooleen = false
+    let sansValeur = null;
+
+    console.log(monNombre === 4)
+    console.log(maChaine ==="Bonjour ! :-)")
+    console.log(monBooleen === false)
+    console.log(sansValeur === null);
+
+  </script> -->
+
+  <script>
+    // Exercice Javascript : Conditions
+    // exo 1
+
+    // let reponse = prompt("Bonjour")
+    // if(reponse === "bonjour") {
+    //     alert("Bonjour à toi !");
+    // } else if(reponse === "Tu vas bien ?"){
+    //     alert("Bien et toi ?");
+    //     }else {
+    //         alert("Désolé, je n'ai pas compris...");
+    //     }
+    
+    // exo 2
+
+    // let reponse = prompt("Bonjour")
+    // if(reponse === "bonjour") {
+    //     alert("Bonjour ! ça va ?")
+    //     let reponse2 = prompt("");
+    //     if(reponse2 === "oui") {
+    //         alert("Je suis content pour toi.")
+    //     }else {
+    //             alert("Il faut que je file.")
+    //     } 
+    // }
+
+    // exo 3
+
+    // let reponse = prompt("salutation")
+    // if(reponse === "salutation") {
+    //     alert("You take the blue pill, the story ends. You wake up in your bed and believe whatever you want to. You take the red pill, you stay in Wonderland, and I show you how deep the rabbit hole goes. Remember, all I'm offering is the truth.")
+    //     let reponse2 = prompt("You're answer ?");
+    //     if(reponse2 === "red") {
+    //         alert("Follow the rabbit, but don't be late !")
+    //         let reponse3 = prompt("What's the color of the rabbit ?")
+    //         if(reponse3 === "white"){
+    //             alert("That's it ! Go, it's time for your meeting with the white rabbit !")
+    //         }else{
+    //             alert("I don't think so.. Open your eyes, and maybe you'll see the right colors !")
+    //         }
+    //     }else if(reponse2 === "blue") {
+    //         alert("Welcome back to reality.")
+    //         let reponse4 = prompt("Do you want a coffee?")
+    //         if(reponse4 === "yes"){
+    //             alert("An irish coffee of course !")
+    //             }else{
+    //                 alert("Go to Hell !")
+    //         }
+    //     } else {
+    //         alert("You have to make a choice, red or blue ?");
+    //     }
+    // }
+
+    // Exercice JAVASCRIPT 3 les boucles
+
+    // for(let number = 1; number <200; number++){
+    //     if (number % 15=== 0 ){
+    //         console.log("Fizz buzz")
+    //     } else if (number % 3 === 0){
+    //         console.log("Fizz")
+    //     } else if (number % 5 === 0){
+    //         console.log("Buzz")
+    //     } else {
+    //         console.log(number);
+    //     }
+    // }
+
+    // Jeu de boucles
+    
+    // firstNum = Math.round(Math.random() * 100)
+    // console.log(firstNum);
+    // let ilTeReste = "il te reste ";
+    // let essais = " essais !";
+    
+    
+
+    // for (let roundNumber = 1; roundNumber <= 10; roundNumber++ ){
+    //     let nbrEssais = 10 - roundNumber;
+    //     let roundMessage = ilTeReste + nbrEssais + essais;
+    //     let reponse = prompt("Donne moi un chiffre entre 0 et 100")
+    //     if(reponse > firstNum){
+    //         alert("Plus petit !");
+    //         alert(roundMessage);
+    //     }else if(reponse < firstNum){
+    //         alert("Plus grand !");
+    //         alert(roundMessage);
+    //     }else if(reponse == firstNum){
+    //         alert("Bravo tu as gagné !");
+    //         break;
+    //     }
+    // }
+
+    // Exercice Javascript4 Les fonctions
+    // function diviserParDeux (nombre){
+    //     return nombre/2;
+    // }
+    // console.log(diviserParDeux(2) === 1);
+    // console.log(diviserParDeux(4) === 2);
+    // var n = Math.random(); 
+    // console.log(diviserParDeux(n) === n / 2);
+
+    // function somme (a, b){
+    //     return a+b;
+    // }
+    // console.log(somme(1, 1) ===2);
+    // console.log(somme(1, 2) === 3);
+    // console.log(somme(2, 1) === 3);
+    // console.log(somme(n, 1) === n + 1);
+
+    // function signe (value){
+    //     if (value > 0 ) {
+    //         return 'positif';
+    //         } else if (value < 0) {
+    //             return "négatif";
+    //             } else{
+    //                 return "nul";}
+    // }
+    // console.log(signe(-1) === 'négatif');
+    // console.log(signe(0) === 'nul');
+    // console.log(signe(Math.random()) === 'positif');
+
+    // function factorielle(n){
+    //     if(n < 0){
+    //     return "number has to be positive."
+    //     }
+    //     if (n == 0 || n == 1){
+    //         return 1;
+    //     }
+    //     else {
+    //         return n * factorielle(n-1);
+    //     } 
+    // }
+    // console.log(factorielle(3));
+    // console.log(factorielle(4) === 24);
+    
+        // Exercice 6 CHI FU MI
+    
+
+        // chifumi random box
+    function FiaScore (){
+        let iaScore = Math.floor(Math.random() * 3);
+            if (iaScore === 1){
+                iaScore = "feuille";
+            } else if (iaScore === 2) {
+            iaScore = "pierre";
+            } else {
+            iaScore = "ciseaux";
+            }
+            return iaScore;
+    }
+    
+
+        // fonction compare
+    function comparer (iaChoice, reponse){
+        if(reponse === "pierre") {
+            if (iaChoice === "feuille"){
+                alert ("Feuille gagne !");
+                return "Feuille gagne !";
+            } else if (iaChoice === "ciseaux"){
+                alert ("Pierre gagne !");
+                return "Pierre gagne !";
+            } else {
+                alert ("Null");
+                return "Null";
+            }
+        } else if (reponse === "feuille"){
+            if (iaChoice === "pierre"){
+                alert ("Feuille gagne !");
+                return "Feuille gagne !";
+            } else if (iaChoice === "ciseaux"){
+                alert ("Ciseaux gagne !");
+                return "Ciseaux gagne !";
+            } else {
+                alert ("Null");
+                return "Null";
+            }
+        } else if (reponse === "ciseaux"){
+            if (iaChoice == "pierre"){
+                alert ("Pierre gagne !");
+                return "Pierre gagne !";
+            } else if (iaChoice === "feuille"){
+                alert ("Ciseaux gagne !");
+                return "Ciseaux gagne !";
+            } else {
+                alert ("Null");
+                return "Null";
+            }
+        }
+    }
+    console.log(comparer (iaChoice, reponse));
+
+        // points count
+
+    
+
+    for (let roundNumber = 1; roundNumber <= 3; roundNumber++ ){
+
+        let iaChoice = FiaScore();
+        console.log(iaChoice);
+        let reponse = prompt("pierre, feuille ou ciseaux ?");
+        console.log(reponse);
+
+        let resultat = comparer (iaChoice, reponse);
+        let scoreOrdi = 0;
+        let scoreJoueur = 0;
+
+        if (resultat === "Feuille gagne !" && reponse === "feuille"){
+            scoreJoueur++;
+        } else if (resultat === "Pierre gagne !" && reponse === "pierre"){
+            scoreJoueur++;
+        } else if (resultat === "Ciseaux gagne !" && reponse === "ciseaux"){
+            scoreJoueur++;
+        }
+
+        if (resultat === "Feuille gagne !" && iaChoice === "feuille"){
+            scoreOrdi++;
+        } else if (resultat === "Pierre gagne !" && iaChoice === "pierre"){
+            scoreOrdi++;
+        } else if (resultat === "Ciseaux gagne !" && iaChoice === "ciseaux"){
+            scoreOrdi++;
+        }
+    
+
+        console.log(scoreJoueur);
+        console.log(scoreOrdi);
+    }
+    // let iaScore = "ciseaux";
+    //     let reponse = prompt("pierre, feuille ou ciseaux ?");
+    //     if(reponse === "pierre") {
+    //         if (iaScore === "feuille"){
+    //             console.log("Feuille gagne !");
+    //         } else if (iaScore === "ciseaux"){
+    //             console.log("Pierre gagne !");
+    //         } else {
+    //             console.log("Null");
+    //         }
+    //     } else if (reponse === "feuille"){
+    //         if (iaScore === "pierre"){
+    //             console.log("Pierre gagne !");
+    //         } else if (iaScore === "ciseaux"){
+    //             console.log("Ciseaux gagne !");
+    //         } else {
+    //             console.log("Null");
+    //         }
+    //     } else if (reponse === "ciseaux"){
+    //         if (iaScore === "pierre"){
+    //             console.log("Pierre gagne !");
+    //         } else if (iaScore === "feuille"){
+    //             console.log("Ciseaux gagne !")
+    //         } else {
+    //             console.log("Null");
+    //         }
+    //     }
+
+
+
+    // else
+    // {
+    //     if (reponse === iaScore){
+    //         return("Egalité !");
+    //     }
+    // }
+    
+
+  </script>
+</body>
+</html> 
