@@ -74,7 +74,7 @@
     //                 alert("Welcome back to reality.")
     //                 let reponse4 = prompt("Do you want a coffee?")
     //                 if(reponse4 === "yes"){
-    //                     alert("An irish coffee of course !")
+    //                     alert("An irish coffee of course ! Cheers my friend !")
     //                     }else{
     //                         alert("Go to Hell !")
     //                 }
@@ -89,21 +89,21 @@
     // Exercice JAVASCRIPT 3 les boucles
     
     // for(let number = 1; number <200; number++){
-    //     if (number % 15=== 0 ){
-    //         console.log("Fizz buzz")
+    //     if (number % 3 === 0 && number % 5 === 0 ){
+    //         console.log("Fizz buzz");
     //     } else if (number % 3 === 0){
-    //         console.log("Fizz")
+    //         console.log("Fizz");
     //     } else if (number % 5 === 0){
-    //         console.log("Buzz")
+    //         console.log("Buzz");
     //     } else {
     //         console.log(number);
     //     }
     // }
-
+    
 
     // Jeu de boucles
     
-    // firstNum = Math.round(Math.random() * 100)
+    // let firstNum = Math.round(Math.random() * 100);
     // console.log(firstNum);
     // let ilTeReste = "il te reste ";
     // let essais = " essais !";
@@ -113,7 +113,7 @@
     // for (let roundNumber = 1; roundNumber <= 10; roundNumber++ ){
     //     let nbrEssais = 10 - roundNumber;
     //     let roundMessage = ilTeReste + nbrEssais + essais;
-    //     let reponse = prompt("Donne moi un chiffre entre 0 et 100")
+    //     let reponse = prompt("Donnes moi un chiffre entre 0 et 100")
     //     if(reponse > firstNum){
     //         alert("Plus petit !");
     //         alert(roundMessage);
@@ -128,7 +128,7 @@
 
     // Exercice Javascript4 Les fonctions
 
-    // function diviserParDeux (nombre){
+    // function diviserParDeux (nombre)
     //     return nombre/2;
     // }
     // console.log(diviserParDeux(2) === 1);
@@ -277,74 +277,142 @@
 
 
         // obj -> number convertor
-     function objectNumber (reponse){
-        if (reponse === "pierre"){
-            reponse = 0;
-        } else if (reponse === "feuille"){
-            reponse = 1;
-        } else if (reponse === "ciseaux"){
-            reponse = 2;
-        }
-        return reponse;
-    }
+    //  function objectNumber (reponse){
+    //     if (reponse === "pierre"){
+    //         reponse = 0;
+    //     } else if (reponse === "feuille"){
+    //         reponse = 1;
+    //     } else if (reponse === "ciseaux"){
+    //         reponse = 2;
+    //     }
+    //     return reponse;
+    // }
 
-    function FuncIaChoice (iaChoice){
-                if (iaChoice === 1){
-                    iaChoice = "feuille";
-                } else if (iaChoice === 0) {
-                    iaChoice = "pierre";
-                } else if (iaChoice === 2) {
-                    iaChoice = "ciseaux";
-                }
-                    return iaChoice;
-            }
+    // function FuncIaChoice (iaChoice){
+    //             if (iaChoice === 1){
+    //                 iaChoice = "feuille";
+    //             } else if (iaChoice === 0) {
+    //                 iaChoice = "pierre";
+    //             } else if (iaChoice === 2) {
+    //                 iaChoice = "ciseaux";
+    //             }
+    //                 return iaChoice;
+    //         }
 
-    let scoreJoueur = 0;
-    let scoreOrdi = 0;
+    // let scoreJoueur = 0;
+    // let scoreOrdi = 0;
 
-    for (let roundNumber = 1; roundNumber <= 3; roundNumber++ ){
+    // for (let roundNumber = 1; roundNumber <= 3; roundNumber++ ){
 
         
-        let reponse = prompt("pierre, feuille ou ciseaux ?");
-        let iaChoice = Math.floor(Math.random() * 3);
-        let delta = (objectNumber(reponse) - iaChoice);
+    //     let reponse = prompt("pierre, feuille ou ciseaux ?");
+    //     let iaChoice = Math.floor(Math.random() * 3);
+    //     let delta = (objectNumber(reponse) - iaChoice);
+    //     // ternaire
+    //     function AdventageCorner (delta){
+    //         return delta ** 2 == 4 ? -0.5 * delta : delta;
+    //     }
+    //     let newDelta = AdventageCorner (delta);
+    //     console.log("new delta :" + newDelta);
+    //     console.log("Delta : " + delta);
+    //     console.log("User choice : " + reponse);
+    //     console.log("IA choice: " + FuncIaChoice (iaChoice));
 
-        console.log("Delta : " + delta);
-        console.log("User choice : " + reponse);
-        console.log("IA choice: " + FuncIaChoice (iaChoice));
+    //     // function roundMessage (newDelta){
+    //     //     return newDelta > 0 ? alert ("C'est gagné c'est gagné !") : alert ("Perdu");
+    //     // }
+    //     if (newDelta == 0){
+    //         alert ("Match Nul");
+    //     } else if (newDelta > 0){
+    //         alert ("C'est gagné c'est gagné !");
+    //         scoreJoueur++;
+    //     } else if (delta < 0){
+    //         alert ("Perdu");
+    //         scoreOrdi++;
+    //     } 
 
-        if (delta == 0){
-            alert ("Match Nul");
-        } else if (delta == -2){
-            alert ("C'est gagné c'est gagné !");
-            scoreJoueur++;
-        } else if (delta == 2){
-            alert ("Perdu");
-            scoreOrdi++;
-        } else if (delta > 0){
-            alert ("C'est gagné c'est gagné !");
-            scoreJoueur++;
-        } else if (delta < 0){
-            alert ("Perdu");
-            scoreOrdi++;
-        } 
+    //     // points count
 
-        // points count
+    //     console.log(scoreJoueur);
+    //     console.log(scoreOrdi);
 
-        console.log(scoreJoueur);
-        console.log(scoreOrdi);
+    //     if (roundNumber === 3){
+    //         if (scoreJoueur < scoreOrdi){
+    //             alert ("L'ordinateur à gagné...");
+    //         } else if(scoreOrdi < scoreJoueur){
+    //             alert ("Vous avez gagné! Le droit de recommencer..");
+    //         } else if (scoreOrdi === scoreJoueur){
+    //             alert ("Match nul, try again !")
+    //         }
+    //     }
+    // }
 
-        if (roundNumber === 3){
-            if (scoreJoueur < scoreOrdi){
-                alert ("L'ordinateur à gagné...");
-            } else if(scoreOrdi < scoreJoueur){
-                alert ("Vous avez gagné! Le droit de recommencer..");
-            } else if (scoreOrdi === scoreJoueur){
-                alert ("Match nul, try again !")
-            }
-        }
+  </script>
+   <!-- // Exercice 7 Array -->
+  <!-- <script>
+    let jours = [ 'lun', '007', 'mer', 'jeu', 'ven', 'sam', 'BUG' ];
+
+    let der = jours.pop() ;
+    let add = jours.push("dim");
+    jours[1] = " mar ";
+    console.log(jours);
+    console.log(jours.length) ;
+    console.log(jours[2]) ;
+
+  </script> -->
+  <!-- <script>
+    var fruits = [ 'Mangue', 'Raisin', 'Figue', 'Kiwi' ];
+    console.log(fruits.length);
+    while (fruits.length != 0) {
+      alert (fruits);
+      let fruitChoice = prompt("Quel fruit désirez vous acheter Monseigneur ?");
+
+      if (fruits.indexOf(fruitChoice) >= 0){
+        let fruitNumber = fruits.indexOf(fruitChoice);
+        fruits.splice(fruitNumber, 1);
+        alert ("Ok!");
+        console.log(fruits);
+      } else { alert ("Indisponible messire, j'en suis navré.");}
     }
+
+  </script> -->
+  <script>
+
+    // JEU DU PENDU 
+
+    let mauvaisesLettres = [];
+    let lettresAttendues = [ 's', 'u', 'p', 'e', 'r' ];
+    let LettreRestant = lettresAttendues.length;
     
+    console.log(LettreRestant);
+    while (LettreRestant > 0){
+      let tentativesRestantes = 10 - mauvaisesLettres.length - (5 - lettresAttendues.length);
+      console.log("tentatives restante : " + tentativesRestantes);
+      console.log("lettres attendues : " + lettresAttendues);
+      console.log("mauvaise lettre : " + mauvaisesLettres);
+      console.log(mauvaisesLettres.length);
+      console.log(mauvaisesLettres);
+    
+      let reponse = prompt ("Tu as " + lettresAttendues.length + " lettres à trouver. Il te reste " + tentativesRestantes + "   Choisi une lettre.");
+     
+      if (lettresAttendues.indexOf(reponse) >= 0){
+        alert('Vous avez trouvé la lettre');
+        lettresAttendues.splice(reponse, 1);
+      } else { 
+        alert ("Mauvais choix désolé.");
+        mauvaisesLettres.push(reponse);
+      }
+
+
+      if ((mauvaisesLettres.length == 10) || (tentativesRestantes == 0)){
+        alert("Perdu !");
+        break;
+      }
+      if (lettresAttendues == 0){
+        alert("Gagné !");
+      }
+      console.log(lettresAttendues.length);
+    }
 
   </script>
 </body>
