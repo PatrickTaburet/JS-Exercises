@@ -381,35 +381,40 @@
     // JEU DU PENDU 
 
     let mauvaisesLettres = [];
-    let lettresAttendues = [ 's', 'u', 'p', 'e', 'r' ];
+    let lettresAttendues = [ 's', 's', 's', 's', 'u', 'p', 'e', 'r' ];
     let LettreRestant = lettresAttendues.length;
-    
+    let tentativesRestantes = 11;
     console.log(LettreRestant);
+
     while (LettreRestant > 0){
-      let tentativesRestantes = 10 - mauvaisesLettres.length - (5 - lettresAttendues.length);
+      tentativesRestantes = tentativesRestantes - 1;
       console.log("tentatives restante : " + tentativesRestantes);
       console.log("lettres attendues : " + lettresAttendues);
       console.log("mauvaise lettre : " + mauvaisesLettres);
       console.log(mauvaisesLettres.length);
       console.log(mauvaisesLettres);
     
-      let reponse = prompt ("Tu as " + lettresAttendues.length + " lettres à trouver. Il te reste " + tentativesRestantes + "   Choisi une lettre.");
+      let reponse = prompt ("Tu as " + lettresAttendues.length + " lettres à trouver. Il te reste " + tentativesRestantes + " tentatives.  Choisi une lettre.");
      
+
       if (lettresAttendues.indexOf(reponse) >= 0){
         alert('Vous avez trouvé la lettre');
-        lettresAttendues.splice(reponse, 1);
+        while ( lettresAttendues.indexOf(reponse) >= 0){
+          let indexReponse = lettresAttendues.indexOf(reponse);
+          lettresAttendues.splice(indexReponse, 1);
+        }
       } else { 
         alert ("Mauvais choix désolé.");
         mauvaisesLettres.push(reponse);
       }
 
-
       if ((mauvaisesLettres.length == 10) || (tentativesRestantes == 0)){
         alert("Perdu !");
         break;
       }
-      if (lettresAttendues == 0){
+      if (lettresAttendues.length == 0){
         alert("Gagné !");
+        break;
       }
       console.log(lettresAttendues.length);
     }
