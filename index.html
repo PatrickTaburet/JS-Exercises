@@ -446,26 +446,38 @@
     while (mainReponse != "q"){
       let mainReponse = prompt("Saisissez la première lettre de la fonction souhaitée : - rechercher - liste - ajouter - supprimer - quitter");
       if (mainReponse == "r"){
-        let reponse = prompt("Tapez le nom de la personne recherchée pour afficher son numéro. Sinon, tapez b pour retourner à l'acceuil.");
-        if (reponse == "b"){
+        let recherche = prompt("Tapez le nom de la personne recherchée pour afficher son numéro. Sinon, tapez b pour retourner à l'acceuil.");
+        if (recherche == "b"){
           continue;
         } else {
-          alert(reponse + " : " + annuaire[reponse]);
+          alert(recherche + " : " + annuaire[recherche]);
         }
       }
       if (mainReponse == "l"){
         for (let cle in annuaire){
           console.log(cle, " -> ", annuaire[cle]);
         }
-
+      }
+      if (mainReponse == "a"){
+        let nom = prompt('Quel est le nom du contact à ajouter?');
+        annuaire[nom] = 0;
+        let num = prompt("Quel est le numéro de ce contact ?");
+        annuaire[nom] = num;
+        alert (nom + " a bien été ajouté à l'annuaire.");
+      }
+      if (mainReponse == "s"){
+        let sup = prompt ("Entrez le nom du contact à supprimer de l'annuaire.") ;
+        if (annuaire.hasOwnProperty(sup)){
+          delete annuaire[sup];
+          alert ( sup + " a bien été supprimé de l'annuaire.");
+        } else {
+          alert ("Ce contact n'existe pas dans l'annuaire");
+        }
+      }
+      if (mainReponse == "q"){
+        break;
       }
     }
-
-    // console.log(annuaire.patricia);
-    // let reponse = prompt("Voulez vous le numéro de patricia ou de david ?");
-    // alert( reponse + " : " + annuaire[reponse]);
-    
-
   </script>
 </body>
 </html> 
