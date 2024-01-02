@@ -376,12 +376,13 @@
     }
 
   </script> -->
-  <script>
+  <!-- <script>
 
     // JEU DU PENDU 
 
     let mauvaisesLettres = [];
-    let lettresAttendues = [ 's', 's', 's', 's', 'u', 'p', 'e', 'r' ];
+    let lettresAttendues = [ 'o', 'k','k', 'o' ];
+    let magicWord = "okko";
     let LettreRestant = lettresAttendues.length;
     let tentativesRestantes = 11;
     console.log(LettreRestant);
@@ -414,10 +415,56 @@
       }
       if (lettresAttendues.length == 0){
         alert("Gagné !");
+        alert("Le mot était : " + magicWord);
         break;
       }
       console.log(lettresAttendues.length);
     }
+
+  </script> -->
+
+  <!-- Exercice 8 -->
+  <script>
+    // --------annuaire téléphonique 
+
+    // let annuaire = {
+    //   patricia: '06 66 66 66 66',
+    //   david: '07 77 77 77 77',
+    // };
+    // console.log(annuaire.patricia);
+    // let reponse = prompt("Voulez vous le numéro de patricia ou de david ?");
+    // alert( reponse + " : " + annuaire[reponse]);
+
+    // ------ Répertoire téléphonique
+
+    let annuaire = {
+      patricia: '06 66 66 66 66',
+      david: '07 77 77 77 77',
+    };
+    let mainReponse;
+
+    while (mainReponse != "q"){
+      let mainReponse = prompt("Saisissez la première lettre de la fonction souhaitée : - rechercher - liste - ajouter - supprimer - quitter");
+      if (mainReponse == "r"){
+        let reponse = prompt("Tapez le nom de la personne recherchée pour afficher son numéro. Sinon, tapez b pour retourner à l'acceuil.");
+        if (reponse == "b"){
+          continue;
+        } else {
+          alert(reponse + " : " + annuaire[reponse]);
+        }
+      }
+      if (mainReponse == "l"){
+        for (let cle in annuaire){
+          console.log(cle, " -> ", annuaire[cle]);
+        }
+
+      }
+    }
+
+    // console.log(annuaire.patricia);
+    // let reponse = prompt("Voulez vous le numéro de patricia ou de david ?");
+    // alert( reponse + " : " + annuaire[reponse]);
+    
 
   </script>
 </body>
